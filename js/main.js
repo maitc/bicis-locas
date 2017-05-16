@@ -25,7 +25,7 @@ function validateForm(){
 					spanNombre.appendChild(hijoNombre);
 					obligatorioNombre.appendChild(spanNombre);
 					return hijoNombre;
-				}else if(nombre != soloCaracteres){
+				}else if(nombre != soloCaracteres){//no corre completamente
 					var obligatorioNombre = document.getElementsByClassName("input-box")[0];
 					var spanNombre = document.createElement("span");
 					var hijoNombre = document.createTextNode("Deben ser solo letras A-Z");
@@ -52,7 +52,7 @@ function validateForm(){
 					spanApellido.appendChild(hijoApellido);
 					obligatorioApellido.appendChild(spanApellido);
 					return hijoApellido;
-				}else if(apellido != soloCaracteres){
+				}else if(apellido != soloCaracteres){//no corre completamente
 					var obligatorioApellido = document.getElementsByClassName("input-box")[1];
 					var spanApellido = document.createElement("span");
 					var hijoApellido = document.createTextNode("Deben ser solo letras A-Z");
@@ -64,7 +64,7 @@ function validateForm(){
 			validacionApellido();
 
 			function validacionCorreo(){
-				var patron = /^([a-z]+[a-z1-9._-]*)@{1}([a-z1-9\.]{2,})\.([a-z]{2,3})$/;
+				var validarCorreo = /^([a-z]+[a-z1-9._-]*)@{1}([a-z1-9\.]{2,})\.([a-z]{2,3})$/;
 				if(correo === ""){
 					var obligatorioCorreo = document.getElementsByClassName("input-box")[2];
 					var spanCorreo = document.createElement("span");
@@ -72,7 +72,7 @@ function validateForm(){
 					spanCorreo.appendChild(hijoCorreo);
 					obligatorioCorreo.appendChild(spanCorreo);
 					return hijoCorreo; 
-				}else if(correo != patron){//No corre completamente :( 
+				}else if(correo != validarCorreo){//No corre completamente :( 
 					var obligatorioCorreo = document.getElementsByClassName("input-box")[2];
 					var spanCorreo = document.createElement("span");
 					var hijoCorreo = document.createTextNode("Debe tener '@' y '.'");
