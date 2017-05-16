@@ -159,13 +159,11 @@ function validateForm(){
 							return hijoValidacionCaracteres; 
 						}
 			}
-			/*function MaysPrimera(string){
+			function MaysPrimera(string){
   				var mayuscula = string.charAt(0).toUpperCase() + string.slice(1);
   				return spane.innerHTML = "No se permite";
-			}*/
+			}
 	
-	//soloCaracteres(nombre, apellido);
-	//MaysPrimera(nombre, apellido)
-
-	
+	soloCaracteres(nombre, apellido);
+	MaysPrimera(nombre, apellido)*/
 }
